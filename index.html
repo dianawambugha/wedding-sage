@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wedding Sage | Event Planner &amp; Décor</title>
+<meta name="description" content="Event hire, décor and planning for weddings, corporate and social events in Nairobi, Kenya.">
+<link rel="icon" href="images/logo-mark.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+
+body{margin:0}
+*{box-sizing:border-box}
+a{color:inherit}
+button{font:inherit}
+.ws{background:#f7f1e4;color:#26331f;font-family:'EB Garamond',Georgia,serif;font-size:17px;line-height:1.6;width:100%;overflow-x:clip}
+.ws h1,.ws h2,.ws h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+.container{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.topbar{background:#a9b998;color:#26331f;padding:10px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hdr{position:sticky;top:0;z-index:10;background:rgba(247,241,228,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(176,138,62,.45)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:54px;width:auto;border-radius:8px;display:block}
+.bname{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-weight:600;letter-spacing:.03em;line-height:1}
+.bsub{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#4a5a40;margin-top:6px}
+.links{display:flex;align-items:center;gap:26px;font-size:14px;letter-spacing:.11em;text-transform:uppercase}
+.links a{text-decoration:none}
+.links a:hover{color:#7a5a1e}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 24px;min-height:46px;background:#4a6040;color:#fffaf0;text-decoration:none;font-size:13px;letter-spacing:.15em;text-transform:uppercase;border:1px solid #b08a3e;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#3f5535}
+.menu{display:none;align-items:center;justify-content:center;background:none;color:inherit;border:1px solid #4a6040;border-radius:50%;width:44px;height:44px;cursor:pointer}
+.hero{background:#667651;color:#fffaf0}
+.hero-copy{max-width:1180px;margin:0 auto;padding:clamp(55px,8vw,105px) clamp(24px,6vw,80px)}
+.kicker{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:#7a5a1e}
+.hero .kicker{color:#fffaf0}
+.hero h1{font-size:clamp(58px,7.4vw,108px);line-height:.92;letter-spacing:-.02em;margin:22px 0 24px}
+.hero h1 em{color:#f3d9c4;font-style:italic}
+.hero p{max-width:480px;font-size:20px;color:#fffaf0;margin:0 0 30px}
+.row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero .btn{background:#fffaf0;color:#33472b;border-color:#fffaf0}
+.hero .btn:hover{background:#f1e2d3}
+.tlink{font-size:13px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #b08a3e;padding-bottom:4px;color:#3a4f31}
+.hero .tlink{color:#fffaf0;border-color:#f3d9c4}
+.section{padding:clamp(55px,8vw,100px) 0}
+.shead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px}
+.shead h2{font-size:clamp(42px,5vw,66px);line-height:1;margin:12px 0 0;letter-spacing:-.02em;color:#3a4f31}
+.shead p{max-width:400px;font-size:17px;color:#3c4a33;margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.flt{border:1px solid #b08a3e;border-radius:999px;padding:11px 20px;min-height:44px;background:transparent;color:#3a4f31;cursor:pointer;font-size:13px;letter-spacing:.13em;text-transform:uppercase}
+.flt:hover,.flt.on{background:#a9b998;border-color:#7d8e6b;color:#1f2e22}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.prod{background:#fffaf0;border:1px solid rgba(176,138,62,.4);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.prod:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(63,85,53,.14)}
+.pvis{height:190px;background:linear-gradient(135deg,#eee6d2,#cfd8c0)}
+.pvis img{width:100%;height:100%;object-fit:contain;display:block}
+.pbody{padding:18px}
+.ptag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7a5a1e}
+.prod h3{font-size:25px;line-height:1.1;margin:6px 0 4px;color:#3a4f31}
+.pdesc{font-size:15px;color:#3c4a33;min-height:50px}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(176,138,62,.45)}
+.price{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:600;line-height:1.1;color:#3a4f31}
+.price small{display:block;font-family:'EB Garamond',Georgia,serif;font-size:13px;font-weight:400;color:#4a5a40}
+.add{flex:none;border:1px solid #b08a3e;color:#3a4f31;background:transparent;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:22px}
+.add:hover{background:#4a6040;color:#fffaf0}
+.note{font-size:14px;color:#4a5a40;margin-top:20px}
+.services{background:#dfe6d3}
+.sgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(176,138,62,.5);border:1px solid rgba(176,138,62,.5)}
+.service{background:#f7f1e4;padding:32px}
+.sico{width:50px;height:50px;border:1px solid #b08a3e;border-radius:50%;display:grid;place-items:center;color:#4a6040;margin-bottom:20px}
+.sico svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.3}
+.service h3{font-size:30px;margin:0 0 8px;color:#3a4f31}
+.service p{font-size:17px;color:#3c4a33;margin:0}
+.feature{background:#a9b998;color:#26331f}
+.feature-copy{max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(24px,6vw,80px)}
+.feature .kicker{color:#4b3a14}
+.feature h2{font-size:clamp(42px,5vw,70px);line-height:1;margin:16px 0}
+.feature h2 em{color:#4b3a14}
+.feature p{font-size:19px;max-width:470px}
+.flist{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:8px;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.flist li:before{content:'✦';color:#4b3a14;margin-right:12px}
+.contact{text-align:center;padding:clamp(60px,8vw,90px) 20px;background:#f1e2d3}
+.contact h2{font-size:clamp(44px,5.4vw,72px);line-height:1;margin:16px 0;color:#3a4f31}
+.contact p{max-width:540px;margin:0 auto 26px;font-size:19px;color:#34422c}
+.ftr{background:#4a6040;color:#fffaf0;padding:30px 0}
+.fin{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.fbrand{display:flex;align-items:center;gap:14px}
+.fbrand img{height:52px;width:auto;border-radius:6px}
+.fname{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600}
+.fnote{font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:#f1ead8}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#4a6040;color:#fffaf0;padding:12px 20px;border-radius:999px;font-size:15px;z-index:30;transition:.25s;box-shadow:0 8px 30px #0003}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.links{gap:14px}.cta{display:none}}
+@media(max-width:650px){
+.container{width:min(100% - 30px,1180px)}
+.topbar .container{justify-content:center;text-align:center}
+.menu{display:flex}
+.links{display:none;position:absolute;top:100%;left:0;right:0;background:#f7f1e4;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #b08a3e}
+.links.open{display:flex}
+.links a{padding:10px 0}
+.bsub{display:none}
+.hero-copy{padding:46px 25px}
+.shead{align-items:flex-start;flex-direction:column}
+.grid{gap:9px}
+.pvis{height:140px}
+.pbody{padding:12px}
+.prod h3{font-size:21px}
+.pdesc{font-size:14px;min-height:0}
+.sgrid{grid-template-columns:1fr}
+.service{padding:24px}
+.feature-copy{padding:40px 25px}
+.fin{justify-content:center;text-align:center}
+.fbrand{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+
+</style>
+</head>
+<body>
+<div class="ws">
+  <div class="topbar"><div class="container"><span>Wedding · Corporate · Social Events</span><span>Nairobi, Kenya &nbsp;|&nbsp; +254 711 706 553</span></div></div>
+  <header class="hdr"><div class="container nav">
+    <a class="brand" href="#home" aria-label="The Wedding Sage home"><img src="images/logo-mark.jpg" alt="The Wedding Sage monogram"><span><div class="bname">The Wedding Sage</div><div class="bsub">Event planner &amp; décor</div></span></a>
+    <nav class="links" id="navlinks" aria-label="Main">
+      <a href="#catalogue">Hire Catalogue</a>
+      <a href="#services">Our Services</a>
+      <a href="#about">Our Style</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn cta" href="#contact">Plan your event ↗</a>
+    <button class="menu" aria-label="Toggle menu" id="menuToggle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="hero-copy">
+      <div class="kicker">Plan · Decorate · Celebrate</div>
+      <h1>Events<br><em>that matter.</em></h1>
+      <p>Thoughtfully curated event hire, beautiful décor and seamless planning — bringing your vision to life, one detail at a time.</p>
+      <div class="row"><a class="btn" href="#catalogue">Explore our catalogue ↗</a><a class="tlink" href="#services">Discover our services</a></div>
+    </div></section>
+
+    <section class="section" id="catalogue"><div class="container">
+      <div class="shead"><div><div class="kicker">Event hire catalogue</div><h2>Set the scene.</h2></div><p>Quality rentals for exceptional events. Choose your essentials and send us your enquiry for availability.</p></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter catalogue"></div>
+      <div class="grid" id="grid"></div>
+    </div></section>
+
+    <section class="section services" id="services"><div class="container">
+      <div class="shead"><div><div class="kicker">What we do</div><h2>Our services.</h2></div><p>More than events, lasting experiences. We bring the details together so you can enjoy the moment.</p></div>
+      <div class="sgrid">
+        <article class="service"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="1"/><path d="M7 2v4M17 2v4M3 9h18M7 13h3M7 17h3"/></svg></div><h3>Event Planning</h3><p>Concept development, vendor coordination, budget guidance, timelines and on-site management.</p></article>
+        <article class="service"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V9M12 14c-7 0-8-5-8-8 5 0 8 2 8 8ZM12 17c7 0 8-5 8-8-5 0-8 2-8 8ZM12 9c-2-4 0-7 0-7s2 3 0 7Z"/></svg></div><h3>Event Décor</h3><p>Thematic styling, floral arrangements, table settings, backdrops and ambient lighting.</p></article>
+        <article class="service"><div class="sico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M5 10v10M19 10v10M3 20h18M7 6h10M9 6V3h6v3M8 14h8"/></svg></div><h3>Event Hire</h3><p>Quality tents, chairs and décor rentals for weddings, corporate events and private parties.</p></article>
+      </div>
+    </div></section>
+
+    <section class="feature" id="about"><div class="feature-copy">
+      <div class="kicker">The Wedding Sage experience</div>
+      <h2>Beautiful moments.<br><em>Thoughtfully curated.</em></h2>
+      <p>From the first inspiration to the final finishing touch, we create spaces that feel personal, welcoming and beautifully considered.</p>
+      <ul class="flist"><li>Personalized event concepts</li><li>Quality rentals &amp; thoughtful styling</li><li>Reliable setup and coordination</li><li>Wedding, corporate &amp; social occasions</li></ul>
+      <a class="btn" href="#contact">Let’s plan together ↗</a>
+    </div></section>
+
+    <section class="contact" id="contact">
+      <div class="kicker">Let’s create something beautiful</div>
+      <h2>Your event starts here.</h2>
+      <p>Tell us what you’re planning, your date, venue and the items you need. We’ll help you create a beautiful event that fits your vision.</p>
+      <div class="row" style="justify-content:center">
+        <a class="btn" href="https://wa.me/254711706553?text=Hello%20Wedding%20Sage%2C%20I%27d%20like%20to%20enquire%20about%20event%20hire%20and%20d%C3%A9cor." target="_blank" rel="noopener">WhatsApp us ↗</a>
+        <a class="tlink" href="mailto:weddingsageplanners@gmail.com">Email our team</a>
+      </div>
+      <p style="margin:26px auto 0;font-size:16px">+254 711 706 553 &nbsp;·&nbsp; weddingsageplanners@gmail.com &nbsp;·&nbsp; Nairobi, Kenya</p>
+    </section>
+  </main>
+  <footer class="ftr"><div class="container fin">
+    <div class="fbrand"><img src="images/logo-mark.jpg" alt="The Wedding Sage monogram"><div><div class="fname">The Wedding Sage</div><div class="fnote">Event planner &amp; décor · Plan · Decorate · Celebrate</div></div></div>
+    <div class="fnote">Beautiful moments · Thoughtfully curated</div>
+    <div class="fnote">© <span id="year"></span> The Wedding Sage</div>
+  </div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script>
+const PRODUCTS=[["tents", "a-frame-tent.jpg", "A-Frame Tent", "A-Frame Tent", "Tents · Outdoor", "Classic shelter for weddings and garden celebrations.", "KSh 43,000", "per section"], ["tents", "b-line-10.jpg", "B-Line Tent 10 × 10", "B-Line Tent 10 × 10", "Tents · Event", "A spacious, polished option for larger gatherings.", "KSh 35,000", "per tent"], ["tents", "b-line-6.jpg", "B-Line Tent 6 × 6", "B-Line Tent 6 × 6", "Tents · Intimate", "A lovely fit for smaller celebrations and pop-ups.", "KSh 25,000", "per tent"], ["chairs", "crossback.jpg", "Crossback Chair", "Crossback Chair", "Seating · Classic", "Rustic charm for elegant wedding tables.", "KSh 550", "each"], ["chairs", "chiavari-gold.jpg", "Chiavari Gold", "Chiavari Gold Chair", "Seating · Gold", "A timeless statement in warm metallic finish.", "KSh 180", "each"], ["chairs", "chiavari-white.jpg", "Chiavari White", "Chiavari White Chair", "Seating · White", "Clean, airy seating for modern celebrations.", "KSh 150", "each"], ["chairs", "louis.jpg", "Louis Chair", "Louis Chair", "Seating · Elegant", "An elegant silhouette for elevated occasions.", "KSh 600", "each"], ["decor", "backdrops.jpg", "Custom Backdrops", "Custom Backdrops", "Décor · Statement", "Personalized ceremony and photo moments, styled to your theme.", "From KSh 35,000", "custom setup"]].map(a=>({cat:a[0],img:'images/'+a[1],name:a[2],item:a[3],tag:a[4],desc:a[5],price:a[6],unit:a[7]}));
+const FILTERS=[['all','All rentals'],['tents','Tents'],['chairs','Chairs'],['decor','Décor']];
+const WA='254711706553';
+let current='all',toastTimer;
+const $=id=>document.getElementById(id);
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function render(){
+  $('filters').innerHTML=FILTERS.map(f=>'<button class="flt'+(f[0]===current?' on':'')+'" data-f="'+f[0]+'">'+f[1]+'</button>').join('');
+  $('grid').innerHTML=PRODUCTS.filter(p=>current==='all'||p.cat===current).map(p=>
+    '<article class="prod"><div class="pvis"><img src="'+p.img+'" alt="'+esc(p.name)+' photograph" loading="lazy"></div><div class="pbody"><div class="ptag">'+p.tag+'</div><h3>'+p.name+'</h3><div class="pdesc">'+p.desc+'</div><div class="prow"><div class="price">'+p.price+'<small>'+p.unit+'</small></div><button class="add" data-item="'+esc(p.item)+'" aria-label="Enquire about '+esc(p.item)+'">+</button></div></div></article>').join('');
+}
+document.addEventListener('click',e=>{
+  const f=e.target.closest('[data-f]');
+  if(f){current=f.dataset.f;render();return}
+  const a=e.target.closest('.add');
+  if(a){
+    const item=a.dataset.item,t=$('toast');
+    t.textContent=item+' selected — opening WhatsApp enquiry';t.classList.add('show');
+    clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Hello Wedding Sage, please share availability and a quotation for: '+item+'.'),'_blank','noopener');
+  }
+});
+$('menuToggle').addEventListener('click',()=>$('navlinks').classList.toggle('open'));
+$('navlinks').querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>$('navlinks').classList.remove('open')));
+$('year').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
